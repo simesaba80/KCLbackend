@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    tty: true
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
